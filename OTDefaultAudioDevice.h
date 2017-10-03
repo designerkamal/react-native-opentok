@@ -36,6 +36,6 @@
  */
 @property (nonatomic) uint32_t preferredAudioComponentSubtype;
 
-- (BOOL)configureAudioSessionWithDesiredAudioRoute:(NSString*)desiredAudioRoute;
+@property BOOL speakerIsOn;
 
 @end

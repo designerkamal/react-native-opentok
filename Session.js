@@ -14,6 +14,7 @@ export const videoOn = SessionManager.videoOn;
 export const videoOff = SessionManager.videoOff;
 export const cameraFront = SessionManager.cameraFront;
 export const cameraBack = SessionManager.cameraBack;
+export const toggleSpeaker = SessionManager.toggleSpeaker;
 
 export const clearSession = SessionManager.clearSession;
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A0439AC1F3DA1CC0033BEFF /* RCTOpenTokSharedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0439AB1F3DA1CC0033BEFF /* RCTOpenTokSharedInfo.m */; };
+		8A2A17531F834F6A002FF321 /* OTDefaultAudioDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2A17521F834F6A002FF321 /* OTDefaultAudioDevice.m */; };
 		D0807C9E1E29CC2000A0F28B /* RCTOpenTokPublisherView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0807C951E29CC2000A0F28B /* RCTOpenTokPublisherView.m */; };
 		D0807C9F1E29CC2000A0F28B /* RCTOpenTokPublisherViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0807C971E29CC2000A0F28B /* RCTOpenTokPublisherViewManager.m */; };
 		D0807CA01E29CC2000A0F28B /* RCTOpenTokSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0807C991E29CC2000A0F28B /* RCTOpenTokSessionManager.m */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		8A0439AA1F3DA1CC0033BEFF /* RCTOpenTokSharedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTOpenTokSharedInfo.h; sourceTree = "<group>"; };
 		8A0439AB1F3DA1CC0033BEFF /* RCTOpenTokSharedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTOpenTokSharedInfo.m; sourceTree = "<group>"; };
+		8A2A17511F834F6A002FF321 /* OTDefaultAudioDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTDefaultAudioDevice.h; sourceTree = "<group>"; };
+		8A2A17521F834F6A002FF321 /* OTDefaultAudioDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTDefaultAudioDevice.m; sourceTree = "<group>"; };
 		AD8A56611D3FAF1400683126 /* libRCTOpenTok.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTOpenTok.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0807C941E29CC2000A0F28B /* RCTOpenTokPublisherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTOpenTokPublisherView.h; sourceTree = "<group>"; };
 		D0807C951E29CC2000A0F28B /* RCTOpenTokPublisherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTOpenTokPublisherView.m; sourceTree = "<group>"; };
@@ -57,6 +60,8 @@
 		AD8A56581D3FAF1400683126 = {
 			isa = PBXGroup;
 			children = (
+				8A2A17511F834F6A002FF321 /* OTDefaultAudioDevice.h */,
+				8A2A17521F834F6A002FF321 /* OTDefaultAudioDevice.m */,
 				8A0439AA1F3DA1CC0033BEFF /* RCTOpenTokSharedInfo.h */,
 				8A0439AB1F3DA1CC0033BEFF /* RCTOpenTokSharedInfo.m */,
 				D0807C941E29CC2000A0F28B /* RCTOpenTokPublisherView.h */,
@@ -141,6 +146,7 @@
 				D0807CA11E29CC2000A0F28B /* RCTOpenTokSubscriberView.m in Sources */,
 				D0807CA01E29CC2000A0F28B /* RCTOpenTokSessionManager.m in Sources */,
 				8A0439AC1F3DA1CC0033BEFF /* RCTOpenTokSharedInfo.m in Sources */,
+				8A2A17531F834F6A002FF321 /* OTDefaultAudioDevice.m in Sources */,
 				D0807C9E1E29CC2000A0F28B /* RCTOpenTokPublisherView.m in Sources */,
 				D0807CA21E29CC2000A0F28B /* RCTOpenTokSubscriberViewManager.m in Sources */,
 			);

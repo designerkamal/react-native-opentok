@@ -504,7 +504,12 @@ static bool CheckError(OSStatus error, NSString* function) {
     NSUInteger audioOptions = AVAudioSessionCategoryOptionMixWithOthers;
 #if !(TARGET_OS_TV)
     audioOptions |= AVAudioSessionCategoryOptionAllowBluetooth ;
-    audioOptions |= AVAudioSessionCategoryOptionDefaultToSpeaker;
+    
+    // Kamal speaker headset switching 
+    if(self.speakerIsOn){
+        audioOptions |= AVAudioSessionCategoryOptionDefaultToSpeaker;
+    }
+    
     [mySession setCategory:AVAudioSessionCategoryPlayAndRecord
                withOptions:audioOptions
                      error:&error];

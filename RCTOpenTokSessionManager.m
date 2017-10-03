@@ -9,6 +9,7 @@
 #import "RCTOpenTokSessionManager.h"
 #import "React/RCTEventDispatcher.h"
 #import <OpenTok/OpenTok.h>
+#import "OTDefaultAudioDevice.h"
 
 @implementation RCTOpenTokSessionManager
 
@@ -21,6 +22,20 @@
 #pragma mark REACT
 
 RCT_EXPORT_MODULE();
+
+RCT_EXPORT_METHOD(toggleSpeaker) {
+    NSLog(@"RCTOpenTokSessionManager.toggleSpeaker");
+    RCTOpenTokSharedInfo *sharedInfo = [RCTOpenTokSharedInfo sharedInstance];
+    if (sharedInfo.session != nil) {
+        OTDefaultAudioDevice* myAudioDevice = [OTDefaultAudioDevice sharedInstance];
+        if(myAudioDevice.speakerIsOn){
+            myAudioDevice.speakerIsOn = false
+        } else {
+            myAudioDevice.speakerIsOn = true
+        }
+    }
+    [self updateAudioState];
+}
 
 RCT_EXPORT_METHOD(audioOn) {
   NSLog(@"RCTOpenTokSessionManager.audioOn");
@@ -73,8 +88,12 @@ RCT_EXPORT_METHOD(cameraBack) {
 }
 
 RCT_EXPORT_METHOD(connect:(NSString *)apiKey sessionId:(NSString *)sessionId token:(NSString *)token) {
+
+    OTDefaultAudioDevice* _myAudioDevice = [OTDefaultAudioDevice sharedInstance];
+    [OTAudioDeviceManager setAudioDevice:_myAudioDevice];
+    
   NSLog(@"RCTOpenTokSessionManager.connect %@,%@,%@",apiKey,sessionId,token);
-  
+    
   RCTOpenTokSharedInfo *sharedInfo = [RCTOpenTokSharedInfo sharedInstance];
   sharedInfo.session = [[OTSession alloc] initWithApiKey:apiKey sessionId:sessionId delegate:self];
   
