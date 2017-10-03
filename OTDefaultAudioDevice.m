@@ -122,6 +122,7 @@ static OSStatus playout_cb(void *ref_con,
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedInstance = [[OTDefaultAudioDevice alloc] init];
+        _sharedInstance.speakerIsOn = false;
     });
     return _sharedInstance;
 }

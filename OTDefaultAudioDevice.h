@@ -38,4 +38,6 @@
 
 @property BOOL speakerIsOn;
 
+- (BOOL)configureAudioSessionWithDesiredAudioRoute:(NSString*)desiredAudioRoute
+
 @end

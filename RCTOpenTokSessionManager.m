@@ -30,8 +30,10 @@ RCT_EXPORT_METHOD(toggleSpeaker) {
         OTDefaultAudioDevice* myAudioDevice = [OTDefaultAudioDevice sharedInstance];
         if(myAudioDevice.speakerIsOn){
             myAudioDevice.speakerIsOn = false
+            [myAudioDevice configureAudioSessionWithDesiredAudioRoute:@"AudioSessionManagerDevice_Headset"];
         } else {
             myAudioDevice.speakerIsOn = true
+            [myAudioDevice configureAudioSessionWithDesiredAudioRoute:@"AudioSessionManagerDevice_Speaker"];
         }
     }
     [self updateAudioState];
